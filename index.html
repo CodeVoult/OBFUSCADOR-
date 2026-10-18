@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Lua Obfuscator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra Lateral (Sidebar) -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🐼 PANDA<br><span style="font-size: 10px; color: #007bff;">OBFUSCATOR</span></h2>
+        </div>
+        <ul class="menu">
+            <li class="active">Overview</li>
+            <li>Services</li>
+            <li>Documentation</li>
+        </ul>
+        <div class="user-profile">
+            <div class="avatar">N</div>
+            <div class="user-info">
+                <strong>NOEN</strong>
+                <span>estebandelvalle@gmail...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <header>
+            <h1>Good afternoon</h1>
+            <h2 style="font-size: 32px; margin-bottom: 20px;">NOEN</h2>
+            
+            <div class="stats-card">
+                <div class="icon-box">📈</div>
+                <h3>Obfuscator Engine</h3>
+                <p>Protege tus scripts Lua/Luau</p>
+            </div>
+        </header>
+
+        <!-- Área de Trabajo (El Obfuscador) -->
+        <div class="workspace">
+            <div class="editor-container">
+                <h3>Lua Original (Input)</h3>
+                <textarea id="inputCode" placeholder="Pega tu script Lua aquí...">print("Hola Mundo")</textarea>
+            </div>
+            
+            <div class="actions">
+                <button id="obfuscateBtn" class="btn-primary">+ Ofuscar Código</button>
+            </div>
+
+            <div class="editor-container">
+                <h3>Código Protegido (Output)</h3>
+                <textarea id="outputCode" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
