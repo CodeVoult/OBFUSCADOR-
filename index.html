@@ -3,61 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panda Lua Obfuscator</title>
+    <title>Neon Lua Obfuscator</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Cargamos Monaco Editor (VS Code en la web) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js"></script>
 </head>
 <body>
+    <!-- Fondo animado -->
+    <div class="bg-animation"></div>
 
-    <!-- Barra Lateral (Sidebar) -->
-    <div class="sidebar">
+    <nav class="navbar">
         <div class="logo">
-            <h2>🐼 PANDA<br><span style="font-size: 10px; color: #007bff;">OBFUSCATOR</span></h2>
+            <span class="neon-text">NEO</span> Lua Obfuscator
         </div>
-        <ul class="menu">
-            <li class="active">Overview</li>
-            <li>Services</li>
-            <li>Documentation</li>
-        </ul>
-        <div class="user-profile">
-            <div class="avatar">N</div>
-            <div class="user-info">
-                <strong>NOEN</strong>
-                <span>estebandelvalle@gmail...</span>
-            </div>
+        <div class="user-badge">Guest User</div>
+    </nav>
+
+    <main class="container">
+        <div class="header-content">
+            <h1 class="title">Protege tu Código</h1>
+            <p class="subtitle">Ofuscación avanzada con encriptación de strings y control de flujo.</p>
         </div>
-    </div>
 
-    <!-- Contenido Principal -->
-    <div class="main-content">
-        <header>
-            <h1>Good afternoon</h1>
-            <h2 style="font-size: 32px; margin-bottom: 20px;">NOEN</h2>
-            
-            <div class="stats-card">
-                <div class="icon-box">📈</div>
-                <h3>Obfuscator Engine</h3>
-                <p>Protege tus scripts Lua/Luau</p>
-            </div>
-        </header>
-
-        <!-- Área de Trabajo (El Obfuscador) -->
         <div class="workspace">
-            <div class="editor-container">
-                <h3>Lua Original (Input)</h3>
-                <textarea id="inputCode" placeholder="Pega tu script Lua aquí...">print("Hola Mundo")</textarea>
-            </div>
-            
-            <div class="actions">
-                <button id="obfuscateBtn" class="btn-primary">+ Ofuscar Código</button>
+            <!-- Panel de Entrada -->
+            <div class="glass-panel">
+                <div class="panel-header">
+                    <h3>📄 Script Original (Lua)</h3>
+                </div>
+                <div id="inputEditor" class="editor"></div>
             </div>
 
-            <div class="editor-container">
-                <h3>Código Protegido (Output)</h3>
-                <textarea id="outputCode" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+            <!-- Controles -->
+            <div class="controls">
+                <select id="obfuscationLevel" class="custom-select">
+                    <option value="1">Nivel 1: Rápido (Renombrar Variables)</option>
+                    <option value="2" selected>Nivel 2: Fuerte (Strings Encriptados)</option>
+                    <option value="3">Nivel 3: Máximo (Flujo de Control + Strings)</option>
+                </select>
+                <button id="obfuscateBtn" class="btn-neon">
+                    <span class="btn-text">⚡ Ofuscar Código</span>
+                </button>
+            </div>
+
+            <!-- Panel de Salida -->
+            <div class="glass-panel">
+                <div class="panel-header">
+                    <h3>🛡️ Código Protegido</h3>
+                    <button id="copyBtn" class="btn-icon" title="Copiar">📋</button>
+                </div>
+                <div id="outputEditor" class="editor"></div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="engine.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
